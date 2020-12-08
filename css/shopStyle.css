@@ -1,0 +1,146 @@
+
+
+.cart {
+    position: fixed;
+    top: 100px;
+    right: 10px;
+    z-index: 1000;
+    text-align: right;
+    background: none;
+}
+form h4 {
+    display: inline-block;
+    margin-right: 0.5em;
+}
+
+h4 {
+    margin-top: 1em;
+}
+
+.filter {
+    text-align: left;
+}
+
+.shopContainer {
+    background-color:#849FFF;
+    z-index: 5;
+    position: relative;
+    padding: 0em 0 15em 0;
+}
+
+.shopContainer:before, .shopContainer:after{
+    background: #849FFF;
+    top: 0;
+    content: "";
+    display: block;
+    height: 50%;
+    width: 50%;
+    position: absolute;
+    z-index: -1;
+}
+
+
+.shopContainer:before{
+    transform: skewY(-10deg) translateY(-150px);
+    transform-origin: 100% 0;
+    right: 0;
+}
+
+.shopContainer:after{
+    transform: skewY(10deg) translateY(-150px);
+    transform-origin: 0 100%;
+    left: 0;
+}
+
+.shop form {
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.shop .flex {
+    flex-wrap: wrap;
+}
+
+table {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.card {
+    background: #fffffc;
+    width: 30%;
+    margin: 2em 1em;
+    padding: 1em;
+    border-radius: 3px;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, .15);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: 0.23s;
+}
+
+.card:hover {
+    box-shadow: 0px 0px 15px 7px rgba(0, 0, 0, .15);
+    transform: scale(1.05);
+
+}
+
+input[type=image] {
+    box-shadow: 0px 0px 5px 1px #444f75;
+    transition: .23s;
+    height: 26px;
+    width: 107px;
+}
+
+input[type=image]:hover {
+    box-shadow: 0px 0px 7px 3px #444f75;
+}
+
+input[type=hidden] {
+    color: #444f75;
+}
+
+select,
+input[type=text] {
+    padding: 5px;
+}
+
+.price {
+    font-weight: bold;
+    color: #444f75;
+}
+
+footer:before, footer:after {
+    background:  #849FFF;
+}
+
+@media(max-width: 1241px) {
+    .card {
+        width:45%;
+    }
+}
+
+@media(max-width: 827px) {
+    .card {
+        margin: 2em 0.5em;
+    }
+
+    .card img {
+        width:100%;
+    }
+
+    h4 {
+        font-size: 1.3em;
+    }
+}
+
+@media(max-width:550px) {
+    .card {
+        width: 90%;
+    }
+}

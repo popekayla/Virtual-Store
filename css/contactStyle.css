@@ -1,0 +1,138 @@
+.contactContainer {
+    z-index: 15;
+    position: relative;
+    padding: 3em 0 5em 0;
+}
+
+.contactContainer:before, .contactContainer:after{
+    background: #fffffc;
+    top: 0;
+    content: "";
+    display: block;
+    height: 50%;
+    width: 50%;
+    position: absolute;
+    z-index: -1;
+}
+
+
+.contactContainer:before{
+    transform: skewY(-10deg) translateY(-150px);
+    transform-origin: 100% 0;
+    right: 0;
+}
+
+.contactContainer:after{
+    transform: skewY(10deg) translateY(-150px);
+    transform-origin: 0 100%;
+    left: 0;
+}
+
+.form {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contactInfo {
+    width: 30%;
+    margin-left: 2em;
+    background-color: #4868DB;
+    padding: 5em 35px;
+    color: #fffffc;
+}
+
+form p {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+form label {
+    width: 15%;
+    margin: 1em 0;
+    text-align: left;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="date"],
+textarea {
+    width: 85%;
+    padding: 1em;
+    margin: 1em 0;
+    border: 1px solid gray;
+    box-shadow: 0 0 0.3em 0 rgba(0, 0, 0, 0.15);
+}
+
+
+form input[type="submit"] {
+    width: 25%;
+    margin: 0;
+    padding: 0.5em;
+    margin: 1em 0;
+    border: 1px solid gray;
+    box-shadow: 0 0 0.3em 0 rgba(0, 0, 0, 0.15);
+    transition: all .2s;
+}
+
+form input[type="submit"]:hover {
+    box-shadow: 0 0 0.5em 0 rgba(0, 0, 0, 0.25);
+    background-color: white;
+}
+
+
+@media(max-width:900px) {
+    .contactInfo {
+        width: 100%;
+        margin:2em 0 0 0;
+    }
+    
+    .form, .form p {
+        width: 100%;
+    }
+
+}
+
+@media(max-width: 768px) {
+
+    .contactContainer {
+        padding:0 0 5em 0;
+        margin-top: 1.5em;
+        text-align: center;
+    }
+
+    .contactContainer:before{
+        transform: skewY(-10deg) translateY(-100px);
+        transform-origin: 100% 0;
+        right: 0;
+    }
+    
+    .contactContainer:after{
+        transform: skewY(10deg) translateY(-100px);
+        transform-origin: 0 100%;
+        left: 0;
+    }
+
+
+}
+
+
+@media(max-width: 600px) {
+
+    .form p {
+        flex-wrap: wrap;
+    }
+    .form label{
+        width: 100%;
+        margin: 1em 0 0 0;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="date"],
+    textarea {
+        width: 100%;
+    }
+}
